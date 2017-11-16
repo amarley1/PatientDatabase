@@ -10,9 +10,13 @@ import UIKit
 class addPatientViewController: UIViewController, UITextViewDelegate {
     
 
+    @IBOutlet weak var enterPatient: UITextView!
     
-    @IBOutlet var enterPatient: UITextView?
+    //@IBOutlet var enterPatient: UITextView?
 
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func savePatient(_ sender: Any) {
     

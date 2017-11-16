@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Patient Database-->
+        <!--Table View Controller-->
         <scene sceneID="CGK-Ki-m8R">
             <objects>
                 <tableViewController storyboardIdentifier="Table View Controller" id="kgM-In-SrD" customClass="TableViewController" customModule="PatientDatabase" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,13 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" id="PdF-iK-FKc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="PdF-iK-FKc">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PdF-iK-FKc" id="3AE-T5-xjo">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="Cell"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -32,15 +33,15 @@
                             <outlet property="delegate" destination="kgM-In-SrD" id="jJ3-5E-dO4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Patient Database" id="lYQ-kb-kMY">
+                    <navigationItem key="navigationItem" id="lYQ-kb-kMY">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="c2h-IU-HWl">
                             <connections>
-                                <segue destination="W2Q-S6-gNl" kind="show" id="9s8-PZ-YOO"/>
+                                <segue destination="W2Q-S6-gNl" kind="presentation" identifier="addPatient" id="DF4-cm-nsv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="apQ-Km-ejm" kind="show" id="8NK-De-40s"/>
+                        <segue destination="apQ-Km-ejm" kind="presentation" identifier="UpdateVC" id="ZvP-zn-ThD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h36-1U-z88" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -92,19 +93,26 @@
                                     <action selector="savePatient:" destination="W2Q-S6-gNl" eventType="touchUpInside" id="5sQ-T5-nBN"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="enterPatient" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5CQ-wp-bSU">
-                                <rect key="frame" x="132" y="80" width="215" height="38"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rtx-XY-9xG">
+                                <rect key="frame" x="132" y="77" width="227" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <accessibility key="accessibilityConfiguration" identifier="enterPatient"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKt-2z-Ig5">
+                                <rect key="frame" x="304" y="28" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="W2Q-S6-gNl" eventType="touchUpInside" id="BiQ-S8-7ba"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="enterPatient" destination="080-6J-vOA" id="oIP-SV-LyL"/>
+                        <outlet property="enterPatient" destination="rtx-XY-9xG" id="wJ3-10-weI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Osv-Ht-4CQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

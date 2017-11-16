@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, UITextViewDelegate {
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var patients: [Patient] = []
@@ -44,6 +44,7 @@ class TableViewController: UITableViewController {
             savedPatient = patients
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                
             }
             
             
@@ -52,14 +53,32 @@ class TableViewController: UITableViewController {
         }
         
     }
-
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
+        
+        cell.textLabel?.text = savedPatient[indexPath.row].name
+        print("shit")
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //set index path to selected cell
+        selectedIndex = indexPath.row
+        
+        //perform segue to update notebook entry view
+        performSegue(withIdentifier: "UpdateVC", sender: self)
+        
+        //deslect cell
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-        
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -68,16 +87,7 @@ class TableViewController: UITableViewController {
     }
 
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        // Configure the cell...
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
-        
-        cell.textLabel?.text = savedPatient[indexPath.row].name
-        
-        return cell
-    }
-   
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         //sets up delete button action
