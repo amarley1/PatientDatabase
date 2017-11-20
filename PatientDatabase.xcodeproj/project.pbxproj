@@ -16,6 +16,7 @@
 		DA78BF351FBD0B760095A169 /* PatientDatabaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BF341FBD0B760095A169 /* PatientDatabaseUITests.swift */; };
 		DA78BF431FBD0DF90095A169 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BF421FBD0DF90095A169 /* TableViewController.swift */; };
 		DA78BF451FBD14A40095A169 /* addPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BF441FBD14A40095A169 /* addPatientViewController.swift */; };
+		DA78BF471FC291290095A169 /* updatePatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BF461FC291290095A169 /* updatePatientViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		DA78BF361FBD0B760095A169 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA78BF421FBD0DF90095A169 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		DA78BF441FBD14A40095A169 /* addPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = addPatientViewController.swift; path = ../addPatientViewController.swift; sourceTree = "<group>"; };
+		DA78BF461FC291290095A169 /* updatePatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = updatePatientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				DA78BF111FBD0B760095A169 /* AppDelegate.swift */,
 				DA78BF421FBD0DF90095A169 /* TableViewController.swift */,
 				DA78BF441FBD14A40095A169 /* addPatientViewController.swift */,
+				DA78BF461FC291290095A169 /* updatePatientViewController.swift */,
 				DA78BF151FBD0B760095A169 /* Main.storyboard */,
 				DA78BF1B1FBD0B760095A169 /* Assets.xcassets */,
 				DA78BF1D1FBD0B760095A169 /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 				DA78BF121FBD0B760095A169 /* AppDelegate.swift in Sources */,
 				DA78BF1A1FBD0B760095A169 /* PatientDatabase.xcdatamodeld in Sources */,
 				DA78BF451FBD14A40095A169 /* addPatientViewController.swift in Sources */,
+				DA78BF471FC291290095A169 /* updatePatientViewController.swift in Sources */,
 				DA78BF431FBD0DF90095A169 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +519,7 @@
 				DA78BF3B1FBD0B760095A169 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA78BF3C1FBD0B760095A169 /* Build configuration list for PBXNativeTarget "PatientDatabaseTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +528,7 @@
 				DA78BF3E1FBD0B760095A169 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA78BF3F1FBD0B760095A169 /* Build configuration list for PBXNativeTarget "PatientDatabaseUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +537,7 @@
 				DA78BF411FBD0B760095A169 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
