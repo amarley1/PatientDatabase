@@ -10,6 +10,12 @@ import UIKit
 
 class updatePatientViewController: UIViewController, UITextViewDelegate {
     
+    @IBOutlet var shortBreathDisp: UISwitch!
+    
+    @IBAction func shortBreath2(_ sender: UISwitch) {
+        
+    }
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var patient: Patient!
@@ -44,11 +50,16 @@ class updatePatientViewController: UIViewController, UITextViewDelegate {
         // Do any additional setup after loading the view.
         
         entryText!.becomeFirstResponder()
-        configureEntryData(entry: patient)
+        
         
         
         print(patient)
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        configureEntryData(entry: patient)
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,6 +75,17 @@ class updatePatientViewController: UIViewController, UITextViewDelegate {
         }
         
         entryText!.text = text
+        print(shortBreathDisp.isOn)
+        
+        if patient.resp1 == 1
+        {
+            shortBreathDisp.setOn(true, animated: true)
+            
+        }
+        else
+        {
+            shortBreathDisp.setOn(false, animated: true)
+        }
     }
     
     
