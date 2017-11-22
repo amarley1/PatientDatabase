@@ -241,7 +241,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="savePatient" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXA-1c-n8P">
-                                <rect key="frame" x="102" y="610" width="169" height="37"/>
+                                <rect key="frame" x="102" y="622" width="169" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save Patient Information"/>
                                 <connections>
@@ -368,6 +368,14 @@
                                     <action selector="numbness:" destination="W2Q-S6-gNl" eventType="valueChanged" id="hpI-A1-CSa"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4W-fh-0Ve">
+                                <rect key="frame" x="28" y="549" width="309" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.76291288859999995" green="0.0" blue="0.19131810430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.76291288859999995" green="0.0" blue="0.19131810430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -375,6 +383,7 @@
                         <outlet property="chestPainDisp" destination="qVl-hJ-veQ" id="jMn-O4-2Bl"/>
                         <outlet property="coughingDisp" destination="Ir4-Xb-vEN" id="b2w-8K-EMd"/>
                         <outlet property="enterPatient" destination="rtx-XY-9xG" id="wJ3-10-weI"/>
+                        <outlet property="initialwarning" destination="X4W-fh-0Ve" id="XbG-Sk-FeS"/>
                         <outlet property="nauseaDisp" destination="gbp-wz-Ug3" id="0FB-Ur-RQ6"/>
                         <outlet property="numbnessDisp" destination="Bad-1m-Rq0" id="ttY-5c-DZp"/>
                         <outlet property="shortBreathDisp" destination="080-6J-vOA" id="XO9-cT-gOO"/>

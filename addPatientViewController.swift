@@ -16,6 +16,8 @@ class addPatientViewController: UIViewController, UITextViewDelegate {
     var cardiac1: Int = 0;
     var cardiac2: Int = 0;
     
+    @IBOutlet weak var initialwarning: UILabel!
+    
     @IBOutlet var shortBreathDisp: UISwitch!
     @IBAction func shortBreath(_ sender: UISwitch) {
         
@@ -25,6 +27,23 @@ class addPatientViewController: UIViewController, UITextViewDelegate {
         }
         else {
             resp1 = 0;
+        }
+        
+        if cardiac1 == 1 && cardiac2 == 1
+        {
+            initialwarning.text = "Your symptoms indicate that you may have a cardiac infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else if resp1 == 1 && resp2 == 1
+        {
+            
+            initialwarning.text = "Your symptoms indicate that you may have a respiratory infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else if gi1 == 1 && gi2 == 1
+        {
+            initialwarning.text = "Your symptoms indicate that you may have a gastrointestinal infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else{
+            initialwarning.text = ""
         }
     }
     
@@ -36,6 +55,23 @@ class addPatientViewController: UIViewController, UITextViewDelegate {
         else {
             resp2 = 0;
         }
+        
+        if cardiac1 == 1 && cardiac2 == 1
+        {
+            initialwarning.text = "Your symptoms indicate that you may have a cardiac infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else if resp1 == 1 && resp2 == 1
+        {
+            
+            initialwarning.text = "Your symptoms indicate that you may have a respiratory infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else if gi1 == 1 && gi2 == 1
+        {
+            initialwarning.text = "Your symptoms indicate that you may have a gastrointestinal infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else{
+            initialwarning.text = ""
+        }
     }
     
     @IBOutlet weak var nauseaDisp: UISwitch!
@@ -45,6 +81,23 @@ class addPatientViewController: UIViewController, UITextViewDelegate {
         }
         else {
             gi1 = 0;
+        }
+        
+        if cardiac1 == 1 && cardiac2 == 1
+        {
+            initialwarning.text = "Your symptoms indicate that you may have a cardiac infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else if resp1 == 1 && resp2 == 1
+        {
+            
+            initialwarning.text = "Your symptoms indicate that you may have a respiratory infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else if gi1 == 1 && gi2 == 1
+        {
+            initialwarning.text = "Your symptoms indicate that you may have a gastrointestinal infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else{
+            initialwarning.text = ""
         }
     }
     
@@ -56,6 +109,23 @@ class addPatientViewController: UIViewController, UITextViewDelegate {
         else {
             gi2 = 0;
         }
+        
+        if cardiac1 == 1 && cardiac2 == 1
+        {
+            initialwarning.text = "Your symptoms indicate that you may have a cardiac infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else if resp1 == 1 && resp2 == 1
+        {
+            
+            initialwarning.text = "Your symptoms indicate that you may have a respiratory infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else if gi1 == 1 && gi2 == 1
+        {
+            initialwarning.text = "Your symptoms indicate that you may have a gastrointestinal infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else{
+            initialwarning.text = ""
+        }
     }
 
     @IBOutlet weak var chestPainDisp: UISwitch!
@@ -66,6 +136,23 @@ class addPatientViewController: UIViewController, UITextViewDelegate {
         else {
             cardiac1 = 0;
         }
+        
+        if cardiac1 == 1 && cardiac2 == 1
+        {
+            initialwarning.text = "Your symptoms indicate that you may have a cardiac infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else if resp1 == 1 && resp2 == 1
+        {
+            
+            initialwarning.text = "Your symptoms indicate that you may have a respiratory infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else if gi1 == 1 && gi2 == 1
+        {
+            initialwarning.text = "Your symptoms indicate that you may have a gastrointestinal infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else{
+            initialwarning.text = ""
+        }
     }
     
     @IBOutlet weak var numbnessDisp: UISwitch!
@@ -75,6 +162,23 @@ class addPatientViewController: UIViewController, UITextViewDelegate {
         }
         else {
             cardiac2 = 0;
+        }
+        
+        if cardiac1 == 1 && cardiac2 == 1
+        {
+            initialwarning.text = "Your symptoms indicate that you may have a cardiac infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else if resp1 == 1 && resp2 == 1
+        {
+            
+            initialwarning.text = "Your symptoms indicate that you may have a respiratory infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else if gi1 == 1 && gi2 == 1
+        {
+            initialwarning.text = "Your symptoms indicate that you may have a gastrointestinal infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else{
+            initialwarning.text = ""
         }
     }
     
@@ -114,6 +218,11 @@ class addPatientViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         
         enterPatient?.delegate = self
+        
+        initialwarning.lineBreakMode = .byWordWrapping
+        initialwarning.numberOfLines = 0
+        
+
     
         // Do any additional setup after loading the view, typically from a nib.
     }
