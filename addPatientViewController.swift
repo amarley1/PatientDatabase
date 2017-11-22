@@ -10,10 +10,13 @@ import UIKit
 class addPatientViewController: UIViewController, UITextViewDelegate {
     
     var resp1: Int = 0;
-    
+    var resp2: Int = 0;
+    var gi1: Int = 0;
+    var gi2: Int = 0;
+    var cardiac1: Int = 0;
+    var cardiac2: Int = 0;
     
     @IBOutlet var shortBreathDisp: UISwitch!
-    
     @IBAction func shortBreath(_ sender: UISwitch) {
         
         if (sender.isOn == true) {
@@ -23,10 +26,59 @@ class addPatientViewController: UIViewController, UITextViewDelegate {
         else {
             resp1 = 0;
         }
-        
-        
+    }
+    
+    @IBOutlet weak var coughingDisp: UISwitch!
+    @IBAction func coughing(_ sender: UISwitch) {
+        if (sender.isOn == true) {
+            resp2 = 1;
+        }
+        else {
+            resp2 = 0;
+        }
+    }
+    
+    @IBOutlet weak var nauseaDisp: UISwitch!
+    @IBAction func nausea(_ sender: UISwitch) {
+        if (sender.isOn == true) {
+            gi1 = 1;
+        }
+        else {
+            gi1 = 0;
+        }
+    }
+    
+    @IBOutlet weak var vomitingDisp: UISwitch!
+    @IBAction func vomiting(_ sender: UISwitch) {
+        if (sender.isOn == true) {
+            gi2 = 1;
+        }
+        else {
+            gi2 = 0;
+        }
     }
 
+    @IBOutlet weak var chestPainDisp: UISwitch!
+    @IBAction func chestPain(_ sender: UISwitch) {
+        if (sender.isOn == true) {
+            cardiac1 = 1;
+        }
+        else {
+            cardiac1 = 0;
+        }
+    }
+    
+    @IBOutlet weak var numbnessDisp: UISwitch!
+    @IBAction func numbness(_ sender: UISwitch) {
+        if (sender.isOn == true) {
+            cardiac2 = 1;
+        }
+        else {
+            cardiac2 = 0;
+        }
+    }
+    
+    
     @IBOutlet weak var enterPatient: UITextView!
     
     //@IBOutlet var enterPatient: UITextView?
@@ -44,6 +96,11 @@ class addPatientViewController: UIViewController, UITextViewDelegate {
    
         //shortness of breath switch
         newPatient.resp1 = Int16(resp1)
+        newPatient.resp2 = Int16(resp2)
+        newPatient.gi1 = Int16(gi1)
+        newPatient.gi2 = Int16(gi2)
+        newPatient.cardiac1 = Int16(cardiac1)
+        newPatient.cardiac2 = Int16(cardiac2)
         
             
         (UIApplication.shared.delegate as! AppDelegate).saveContext()

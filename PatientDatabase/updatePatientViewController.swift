@@ -9,12 +9,77 @@
 import UIKit
 
 class updatePatientViewController: UIViewController, UITextViewDelegate {
+    @IBOutlet weak var warning: UILabel!
+
     
     @IBOutlet var shortBreathDisp: UISwitch!
     
     @IBAction func shortBreath2(_ sender: UISwitch) {
-        
+        if (sender.isOn == true) {
+            patient.resp1 = 1;
+            
+        }
+        else {
+            patient.resp1 = 0;
+        }
     }
+    
+    @IBOutlet weak var coughingDisp: UISwitch!
+    @IBAction func coughing2(_ sender: UISwitch) {
+        if (sender.isOn == true) {
+            patient.resp2 = 1;
+            
+        }
+        else {
+            patient.resp2 = 0;
+        }
+    }
+    
+    @IBOutlet weak var nauseaDisp: UISwitch!
+    @IBAction func nausea2(_ sender: UISwitch) {
+        if (sender.isOn == true) {
+            patient.gi1 = 1;
+            
+        }
+        else {
+            patient.gi1 = 0;
+        }
+    }
+
+    @IBOutlet weak var vomitingDisp: UISwitch!
+    @IBAction func vomiting2(_ sender: UISwitch) {
+        if (sender.isOn == true) {
+            patient.gi2 = 1;
+            
+        }
+        else {
+            patient.gi2 = 0;
+        }
+    }
+    
+    @IBOutlet weak var chestPainDisp: UISwitch!
+    @IBAction func chestPain2(_ sender: UISwitch) {
+        if (sender.isOn == true) {
+            patient.cardiac1 = 1;
+            
+        }
+        else {
+            patient.cardiac1 = 0;
+        }
+    }
+    
+    @IBOutlet weak var numbnessDisp: UISwitch!
+    @IBAction func numbness2(_ sender: UISwitch) {
+        if (sender.isOn == true) {
+            patient.cardiac2 = 1;
+            
+        }
+        else {
+            patient.cardiac2 = 0;
+        }
+    }
+    
+    
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -51,7 +116,8 @@ class updatePatientViewController: UIViewController, UITextViewDelegate {
         
         entryText!.becomeFirstResponder()
         
-        
+        warning.lineBreakMode = .byWordWrapping
+        warning.numberOfLines = 0
         
         print(patient)
         
@@ -80,11 +146,74 @@ class updatePatientViewController: UIViewController, UITextViewDelegate {
         if patient.resp1 == 1
         {
             shortBreathDisp.setOn(true, animated: true)
-            
         }
         else
         {
             shortBreathDisp.setOn(false, animated: true)
+        }
+        
+        if patient.resp2 == 1
+        {
+            coughingDisp.setOn(true, animated: true)
+        }
+        else
+        {
+            coughingDisp.setOn(false, animated: true)
+        }
+        
+        if patient.gi1 == 1
+        {
+            nauseaDisp.setOn(true, animated: true)
+        }
+        else
+        {
+            nauseaDisp.setOn(false, animated: true)
+        }
+        
+        if patient.gi2 == 1
+        {
+            vomitingDisp.setOn(true, animated: true)
+        }
+        else
+        {
+            vomitingDisp.setOn(false, animated: true)
+        }
+        
+        if patient.cardiac1 == 1
+        {
+            chestPainDisp.setOn(true, animated: true)
+        }
+        else
+        {
+            chestPainDisp.setOn(false, animated: true)
+        }
+        
+        if patient.cardiac2 == 1
+        {
+            numbnessDisp.setOn(true, animated: true)
+        }
+        else
+        {
+            numbnessDisp.setOn(false, animated: true)
+        }
+        
+
+        
+        if patient.cardiac1 == 1 && patient.cardiac2 == 1
+        {
+        warning.text = "Your symptoms indicate that you may have a cardiac infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else if patient.resp1 == 1 && patient.resp2 == 1
+        {
+
+            warning.text = "Your symptoms indicate that you may have a respiratory infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else if patient.gi1 == 1 && patient.gi2 == 1
+        {
+        warning.text = "Your symptoms indicate that you may have a gastrointestinal infection or disease. Please seek evaluation from a trained medical professional."
+        }
+        else{
+        warning.text = ""
         }
     }
     
