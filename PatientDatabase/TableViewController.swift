@@ -18,7 +18,7 @@ class TableViewController: UITableViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        self.tableView.backgroundColor = UIColor.white
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -86,7 +86,9 @@ class TableViewController: UITableViewController, UITextViewDelegate {
     
     // MARK: - Table view data source
 
-
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.white 
+    }
    
 
 
