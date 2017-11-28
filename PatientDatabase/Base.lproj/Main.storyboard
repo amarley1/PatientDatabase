@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17B48" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bFt-N9-R4c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bFt-N9-R4c">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -265,18 +265,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rtx-XY-9xG">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rtx-XY-9xG">
                                 <rect key="frame" x="139" y="70" width="227" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKt-2z-Ig5">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKt-2z-Ig5">
                                 <rect key="frame" x="275" y="0.0" width="100" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.26619025899999998" blue="0.2068349844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <state key="normal" title="        Cancel           ">
@@ -447,6 +445,13 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eKt-2z-Ig5" secondAttribute="trailing" id="2fk-Zu-33q"/>
+                            <constraint firstItem="rtx-XY-9xG" firstAttribute="top" secondItem="eKt-2z-Ig5" secondAttribute="bottom" constant="2" id="M1d-ZW-c6w"/>
+                            <constraint firstItem="eKt-2z-Ig5" firstAttribute="top" secondItem="080-6J-vOA" secondAttribute="top" id="TUJ-vJ-b87"/>
+                            <constraint firstAttribute="trailing" secondItem="eKt-2z-Ig5" secondAttribute="trailing" id="aNG-gc-Xjz"/>
+                            <constraint firstItem="eKt-2z-Ig5" firstAttribute="top" secondItem="080-6J-vOA" secondAttribute="top" id="axL-TI-ypU"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="chestPainDisp" destination="qVl-hJ-veQ" id="jMn-O4-2Bl"/>

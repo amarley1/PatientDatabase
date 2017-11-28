@@ -22,6 +22,23 @@ class updatePatientViewController: UIViewController, UITextViewDelegate {
         else {
             patient.resp1 = 0;
         }
+        
+        if patient.cardiac1 == 1 && patient.cardiac2 == 1
+        {
+            warning.text = "The symptoms indicate that your patient may have a cardiac infection or disease. Please perform additional evaluation."
+        }
+        else if patient.resp1 == 1 && patient.resp2 == 1
+        {
+            
+            warning.text = "The symptoms indicate that your patient may have a respiratory infection or disease. Please perform additional evaluation."
+        }
+        else if patient.gi1 == 1 && patient.gi2 == 1
+        {
+            warning.text = "The symptoms indicate that your patient may have a gastrointestinal infection or disease. Please perform additional evaluation."
+        }
+        else{
+            warning.text = ""
+        }
     }
     
     @IBOutlet weak var coughingDisp: UISwitch!
@@ -32,6 +49,23 @@ class updatePatientViewController: UIViewController, UITextViewDelegate {
         }
         else {
             patient.resp2 = 0;
+        }
+        
+        if patient.cardiac1 == 1 && patient.cardiac2 == 1
+        {
+            warning.text = "The symptoms indicate that your patient may have a cardiac infection or disease. Please perform additional evaluation."
+        }
+        else if patient.resp1 == 1 && patient.resp2 == 1
+        {
+            
+            warning.text = "The symptoms indicate that your patient may have a respiratory infection or disease. Please perform additional evaluation."
+        }
+        else if patient.gi1 == 1 && patient.gi2 == 1
+        {
+            warning.text = "The symptoms indicate that your patient may have a gastrointestinal infection or disease. Please perform additional evaluation."
+        }
+        else{
+            warning.text = ""
         }
     }
     
@@ -44,6 +78,23 @@ class updatePatientViewController: UIViewController, UITextViewDelegate {
         else {
             patient.gi1 = 0;
         }
+        
+        if patient.cardiac1 == 1 && patient.cardiac2 == 1
+        {
+            warning.text = "The symptoms indicate that your patient may have a cardiac infection or disease. Please perform additional evaluation."
+        }
+        else if patient.resp1 == 1 && patient.resp2 == 1
+        {
+            
+            warning.text = "The symptoms indicate that your patient may have a respiratory infection or disease. Please perform additional evaluation."
+        }
+        else if patient.gi1 == 1 && patient.gi2 == 1
+        {
+            warning.text = "The symptoms indicate that your patient may have a gastrointestinal infection or disease. Please perform additional evaluation."
+        }
+        else{
+            warning.text = ""
+        }
     }
 
     @IBOutlet weak var vomitingDisp: UISwitch!
@@ -54,6 +105,23 @@ class updatePatientViewController: UIViewController, UITextViewDelegate {
         }
         else {
             patient.gi2 = 0;
+        }
+        
+        if patient.cardiac1 == 1 && patient.cardiac2 == 1
+        {
+            warning.text = "The symptoms indicate that your patient may have a cardiac infection or disease. Please perform additional evaluation."
+        }
+        else if patient.resp1 == 1 && patient.resp2 == 1
+        {
+            
+            warning.text = "The symptoms indicate that your patient may have a respiratory infection or disease. Please perform additional evaluation."
+        }
+        else if patient.gi1 == 1 && patient.gi2 == 1
+        {
+            warning.text = "The symptoms indicate that your patient may have a gastrointestinal infection or disease. Please perform additional evaluation."
+        }
+        else{
+            warning.text = ""
         }
     }
     
@@ -66,6 +134,23 @@ class updatePatientViewController: UIViewController, UITextViewDelegate {
         else {
             patient.cardiac1 = 0;
         }
+        
+        if patient.cardiac1 == 1 && patient.cardiac2 == 1
+        {
+            warning.text = "The symptoms indicate that your patient may have a cardiac infection or disease. Please perform additional evaluation."
+        }
+        else if patient.resp1 == 1 && patient.resp2 == 1
+        {
+            
+            warning.text = "The symptoms indicate that your patient may have a respiratory infection or disease. Please perform additional evaluation."
+        }
+        else if patient.gi1 == 1 && patient.gi2 == 1
+        {
+            warning.text = "The symptoms indicate that your patient may have a gastrointestinal infection or disease. Please perform additional evaluation."
+        }
+        else{
+            warning.text = ""
+        }
     }
     
     @IBOutlet weak var numbnessDisp: UISwitch!
@@ -76,6 +161,23 @@ class updatePatientViewController: UIViewController, UITextViewDelegate {
         }
         else {
             patient.cardiac2 = 0;
+        }
+        
+        if patient.cardiac1 == 1 && patient.cardiac2 == 1
+        {
+            warning.text = "The symptoms indicate that your patient may have a cardiac infection or disease. Please perform additional evaluation."
+        }
+        else if patient.resp1 == 1 && patient.resp2 == 1
+        {
+            
+            warning.text = "The symptoms indicate that your patient may have a respiratory infection or disease. Please perform additional evaluation."
+        }
+        else if patient.gi1 == 1 && patient.gi2 == 1
+        {
+            warning.text = "The symptoms indicate that your patient may have a gastrointestinal infection or disease. Please perform additional evaluation."
+        }
+        else{
+            warning.text = ""
         }
     }
     
@@ -201,16 +303,16 @@ class updatePatientViewController: UIViewController, UITextViewDelegate {
         
         if patient.cardiac1 == 1 && patient.cardiac2 == 1
         {
-        warning.text = "Your symptoms indicate that you may have a cardiac infection or disease. Please seek evaluation from a trained medical professional."
+        warning.text = "The symptoms indicate that your patient may have a cardiac infection or disease. Please perform additional evaluation."
         }
         else if patient.resp1 == 1 && patient.resp2 == 1
         {
 
-            warning.text = "Your symptoms indicate that you may have a respiratory infection or disease. Please seek evaluation from a trained medical professional."
+            warning.text = "The symptoms indicate that your patient may have a respiratory infection or disease. Please perform additional evaluation."
         }
         else if patient.gi1 == 1 && patient.gi2 == 1
         {
-        warning.text = "Your symptoms indicate that you may have a gastrointestinal infection or disease. Please seek evaluation from a trained medical professional."
+        warning.text = "The symptoms indicate that your patient may have a gastrointestinal infection or disease. Please perform additional evaluation."
         }
         else{
         warning.text = ""
