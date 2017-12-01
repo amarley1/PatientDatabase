@@ -222,7 +222,7 @@ class addPatientViewController: UIViewController, UITextViewDelegate {
         initialwarning.lineBreakMode = .byWordWrapping
         initialwarning.numberOfLines = 0
         
-
+        
     
         // Do any additional setup after loading the view, typically from a nib.
     }
